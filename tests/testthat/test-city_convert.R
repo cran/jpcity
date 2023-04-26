@@ -44,4 +44,40 @@ test_that("city_convert-02", {
 
   out <- city_convert(city, from, "1971-10-31")[[1L]]
   expect_true(setequal(city_code(out), c("04201", "04382", "04403", "04405")))
+
+  # Kushiro city
+  city <- parse_city("01206")
+
+  out <- city_convert(city, "2020-10-01", "2020-10-01")
+  out <- out[[1L]]
+  expect_length(out[[1L]], 1L)
+  expect_equal(city_code(out[1L]), "01206")
+
+  out <- city_convert(city, "2020-10-01", "2005-10-11")
+  out <- out[[1L]]
+  expect_length(out[[1L]], 1L)
+  expect_equal(city_code(out[[1L]]), "01206")
+
+  out <- city_convert(city, "2020-10-01", lubridate::int_end(interval_city) - lubridate::days(1L))
+  out <- out[[1L]]
+  expect_length(out[[1L]], 1L)
+  expect_equal(city_code(out[[1L]]), "01206")
+
+  # Anamizu Town and Monzen Town
+  city <- parse_city(c("17421", "17422"))
+  out <- city_convert(city, "2005-02-28", "2005-03-01")
+  expect_length(out[[1L]], 1L)
+  expect_length(out[[2L]], 1L)
+
+  # Uruma City
+  city <- parse_city("47213",
+                     when = "2020-01-01")
+  cities <- city_convert(city, "2020-01-01", "1994-01-01")[[1L]]
+  expect_true(setequal(city_code(cities), c("47202", "47203", "47322", "47323")))
+
+  cities <- city_convert(city, "2020-01-01", "1972-05-15")[[1L]]
+  expect_true(setequal(city_code(cities), c("47202", "47203", "47322", "47323")))
+
+  cities <- city_convert(city, "2020-01-01", "1972-05-14")[[1L]]
+  expect_length(cities, 0L)
 })
