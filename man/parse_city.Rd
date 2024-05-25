@@ -4,10 +4,10 @@
 \alias{parse_city}
 \title{Parse city codes}
 \usage{
-parse_city(city_code, when = NULL, na = c("", "NA"))
+parse_city(x, when = NULL, na = c("", "NA"))
 }
 \arguments{
-\item{city_code}{A \code{character} vector of city codes.}
+\item{x}{A \code{character} vector of city codes.}
 
 \item{when}{A \code{character} (year, month, and day components) or date-time
 object.}

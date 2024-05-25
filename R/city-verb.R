@@ -99,10 +99,22 @@ city_interval <- function(city,
     attr(city, "interval")
   } else {
     city_data(city) |>
-      dplyr::left_join(nodes_city,
+      dplyr::left_join(graph_city$nodes_city,
                        by = dplyr::join_by("city_code", "pref_name",
                                            "city_desig_name", "city_desig_name_kana",
                                            "city_name", "city_name_kana")) |>
       dplyr::pull("interval")
   }
+}
+
+#' Convert city to prefecture
+#'
+#' @param city A `jpcity_city` object.
+#'
+#' @return A `jpcity_pref` object.
+#'
+#' @export
+city_to_pref <- function(city) {
+  assert_city(city)
+  parse_pref(pref_code(city))
 }

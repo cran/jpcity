@@ -4,6 +4,12 @@
 # jpcity <a href="https://uchidamizuki.github.io/jpcity/"><img src="man/figures/logo.png" align="right" height="139" /></a>
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/UchidaMizuki/jpcity/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UchidaMizuki/jpcity/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/jpcity)](https://CRAN.R-project.org/package=jpcity)
+[![Codecov test
+coverage](https://codecov.io/gh/UchidaMizuki/jpcity/branch/main/graph/badge.svg)](https://app.codecov.io/gh/UchidaMizuki/jpcity?branch=main)
 <!-- badges: end -->
 
 README in Japanese is
@@ -23,6 +29,10 @@ codes. This package provides the following features,
   `find_city()`
 
 ## Installation
+
+``` r
+install.packages("jpcity")
+```
 
 You can install the development version of jpcity from
 [GitHub](https://github.com/) with:
@@ -45,6 +55,9 @@ library(tidyverse)
 city <- parse_city(c("13101", "27101", "23101"))
 #> Guessing the interval to be 1970-04-01 JST--1989-02-12 JST.
 #> ℹ You can override using `when` argument.
+```
+
+``` r
 
 # Override the interval using `when` argument
 city <- parse_city(c("13101", "27101", "23101"),
@@ -62,6 +75,9 @@ city
 #> 1       ちよだく
 #> 2         きたく
 #> 3       ちくさく
+```
+
+``` r
 
 tibble(city = city,
        pref_name = pref_name(city),
@@ -92,6 +108,9 @@ tibble(city_from = city,
 #> 1 13101 [東京都千代田区]       13101 [東京都千代田区]      
 #> 2 27101 [大阪府大阪市北区]     27127 [大阪府大阪市北区]    
 #> 3 23101 [愛知県名古屋市千種区] 23101 [愛知県名古屋市千種区]
+```
+
+``` r
 
 city <- parse_city("15100",
                    when = "2020-01-01")
@@ -141,23 +160,26 @@ tibble(city = city,
 
 ``` r
 tibble(city = get_city("2020-01-01"))
-#> # A tibble: 1,902 × 1
+#> # A tibble: 1,923 × 1
 #>    city                      
 #>    <city>                    
-#>  1 01101 [北海道札幌市中央区]
-#>  2 01102 [北海道札幌市北区]  
-#>  3 01103 [北海道札幌市東区]  
-#>  4 01104 [北海道札幌市白石区]
-#>  5 01105 [北海道札幌市豊平区]
-#>  6 01106 [北海道札幌市南区]  
-#>  7 01107 [北海道札幌市西区]  
-#>  8 01108 [北海道札幌市厚別区]
-#>  9 01109 [北海道札幌市手稲区]
-#> 10 01110 [北海道札幌市清田区]
-#> # … with 1,892 more rows
+#>  1 01100 [北海道札幌市]      
+#>  2 01101 [北海道札幌市中央区]
+#>  3 01102 [北海道札幌市北区]  
+#>  4 01103 [北海道札幌市東区]  
+#>  5 01104 [北海道札幌市白石区]
+#>  6 01105 [北海道札幌市豊平区]
+#>  7 01106 [北海道札幌市南区]  
+#>  8 01107 [北海道札幌市西区]  
+#>  9 01108 [北海道札幌市厚別区]
+#> 10 01109 [北海道札幌市手稲区]
+#> # ℹ 1,913 more rows
+```
+
+``` r
 
 tibble(city = get_city("1970-04-01"))
-#> # A tibble: 3,369 × 1
+#> # A tibble: 3,376 × 1
 #>    city                  
 #>    <city>                
 #>  1 01201 [北海道札幌市]  
@@ -170,14 +192,14 @@ tibble(city = get_city("1970-04-01"))
 #>  8 01208 [北海道北見市]  
 #>  9 01209 [北海道夕張市]  
 #> 10 01210 [北海道岩見沢市]
-#> # … with 3,359 more rows
+#> # ℹ 3,366 more rows
 ```
 
 ### Find city codes using the name of the prefecture or city
 
 ``` r
 find_city(c("東京都", "新宿区"))
-#> <city[1]> Interval: 1970-04-01--2023-03-04
+#> <city[1]> Interval: 1970-04-01--Inf
 #> [1] 13104
 #> 
 #> Cities:
