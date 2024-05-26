@@ -1,7 +1,7 @@
 Package: jpcity
 Type: Package
 Title: Read and Convert Japanese Municipality Codes
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: person("Mizuki", "Uchida", email = "uchidamizuki@vivaldi.net", role = c("aut", "cre"))
 Description: Read Japanese city codes (<https://www.e-stat.go.jp/municipalities/cities>) 
     to get city and prefecture names, or convert to city codes at different 
@@ -19,8 +19,8 @@ URL: https://uchidamizuki.github.io/jpcity/,
         https://github.com/UchidaMizuki/jpcity
 BugReports: https://github.com/UchidaMizuki/jpcity/issues
 NeedsCompilation: no
-Packaged: 2024-05-25 14:20:48 UTC; uchid
+Packaged: 2024-05-26 07:37:23 UTC; uchid
 Author: Mizuki Uchida [aut, cre]
 Maintainer: Mizuki Uchida <uchidamizuki@vivaldi.net>
 Repository: CRAN
-Date/Publication: 2024-05-25 14:30:02 UTC
+Date/Publication: 2024-05-26 08:00:13 UTC

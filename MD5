@@ -1,7 +1,7 @@
-8277e5857487cbcfc8c13c3f323f96c8 *DESCRIPTION
+02cf7072d4fc08e7deb6516547094fa2 *DESCRIPTION
 20bb2abaaf57bb2454ba3416a951acb9 *LICENSE
 91f20c9a9355aeef2d2748dca90b7dff *NAMESPACE
-c44905b0b643e05357c574be5ce6e625 *NEWS.md
+d7d129786b94bad53ad647e691db7dfb *NEWS.md
 1ab500e04dfdde6e40c5051635e48e2f *R/city-print.R
 b79c68947616f9ff3ca167afcc6bd085 *R/city-verb.R
 f367027aa1eaf2c9b35c200dad372d68 *R/city.R
@@ -12,7 +12,7 @@ d9e00cee2549356ca3d12f9c3f929dbc *R/parse_city.R
 4e7c3bba1f07f4bb54b74b189519244f *R/parse_pref.R
 7b0ea27254399d89ccb2771552f6ecd8 *R/pref-print.R
 49b7e269739ffd8f1aed41fbd576c66d *R/pref.R
-e0e25c1e630f5e628c168fab5d05fcb1 *R/sysdata.rda
+91ab6663d5a76823ac508042e6518623 *R/sysdata.rda
 cf631365921181ee875c033ddaee4d9b *R/utils.R
 d5261804b7e0a0a14b9ed7eb17516d63 *README.md
 66de64d77d68409a2be3afc9b9e7bf59 *man/city_code.Rd
@@ -36,7 +36,7 @@ b5a221c4b5dc8cf89c404199f1436da3 *man/parse_pref.Rd
 71327d6cf59de64f1c70b8231cb82492 *man/pref_data.Rd
 86b1b7bb521860b2751fda863818c575 *man/pref_name.Rd
 fbbf15f9c23b05e67dc7a7e032522259 *tests/testthat.R
-c7ba7a53ab4e0ffb5d00b9d371c4f1a2 *tests/testthat/test-city_convert.R
+869632745110782ada012ea4a5ba32a6 *tests/testthat/test-city_convert.R
 afff7ed1fd7b9c908030e4083e79b3c5 *tests/testthat/test-city_desig.R
 d86ae3e4d5333afce8fd6a2f681cef4d *tests/testthat/test-parse_city.R
 5a9d36f30f73a571f8c73bb1beb0b96f *tests/testthat/test-parse_pref.R
